@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/classify/index",
+    "pages/cart/cart",
+    "pages/list/list",
+    "pages/address/add/add",
+    "pages/goods/detail/detail",
+    "pages/seller_order/seller_order",
+    "pages/addresses/addresses",
+    "pages/address-edit/address-edit",
+    "pages/address-edit2/address-edit",
+    "pages/category/category",
+    "pages/pl",
+    "pages/address/list/list",
+    "pages/checkout/checkout",
+    "pages/member/index/index",
+    "pages/help/help",
+    "pages/set/set"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#FF6666",
+    "navigationBarTitleText": "订餐系统",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#3cc51f",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/classify/index",
+        "iconPath": "images/icon_cate.png",
+        "selectedIconPath": "images/icon_cate_selected.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "images/icon_cart.png",
+        "selectedIconPath": "images/icon_cart_selected.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/member/index/index",
+        "iconPath": "images/icon_member.png",
+        "selectedIconPath": "images/icon_member_selected.png",
+        "text": "我"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

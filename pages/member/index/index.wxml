@@ -1,0 +1,38 @@
+
+<view class="order-area">
+	<view bindtap="navigateToOrder" class="order" data-status="0">
+		<image src="../../../images/icon_order.png" />
+		<text>待发货</text>
+	</view>
+	<view bindtap="navigateToOrder" class="order" data-status="1">
+		<image src="../../../images/icon_order.png" />
+		<text>已发货</text>
+	</view>
+	<view bindtap="navigateToOrder" class="order" data-status="2">
+		<image src="../../../images/icon_order.png" />
+		<text>退款中</text>
+	</view>
+	<view bindtap="navigateToOrder" class="order" data-status="3">
+		<image src="../../../images/icon_order.png" />
+		<text>已退款</text>
+	</view>
+  	<view bindtap="navigateToOrder" class="order" data-status="4">
+		<image src="../../../images/icon_order.png" />
+		<text>已收货</text>
+	</view>
+  	
+  <!-- 订单状态 0 已支付待发货 1 已发货 2.申请退款 3 已退款 4 已收货 5 已评价 -->
+</view>
+<view bindtap="navigateToAddress" class="tableviewcell">
+	<image src="../../../images/icon_address.png" />
+	<text>收货地址</text>
+</view>
+
+<view bindtap="navigateToHelp" class="tableviewcell">
+	<image src="../../../images/icon_address.png" />
+	<text>咨询客服</text>
+</view>
+<view bindtap="navigateToSet" class="tableviewcell">
+	<image src="../../../images/icon_address.png" />
+	<text>我的订单</text>
+</view>

@@ -1,0 +1,64 @@
+<view bindtap="all" class="allOrder" wx:if="{{currentStatus != -1}}">
+	<text class="allOrder-left">全部订单</text>
+	<text class="allOrder-right">查看全部订单</text>
+</view>
+<!-- 订单状态 0 已支付待发货 1 已发货 2.申请退款 3 已退款 4 已收货 5 已评价 -->
+<view bindtap="all" class="allOrder" wx:if="{{currentStatus == -1}}">
+	<text class="allOrder-left">全部订单</text>
+</view>
+<view bindtap="all" class="allOrder" wx:if="{{currentStatus == 0}}">
+	<text class="allOrder-left">待发货</text>
+</view>
+<view bindtap="all" class="allOrder" wx:if="{{currentStatus == 1}}">
+	<text class="allOrder-left">已发货</text>
+</view>
+<view bindtap="all" class="allOrder" wx:if="{{currentStatus == 2}}">
+	<text class="allOrder-left">申请退款</text>
+</view>
+<view bindtap="all" class="allOrder" wx:if="{{currentStatus == 3}}">
+	<text class="allOrder-left">已退款</text>
+</view>
+<view bindtap="all" class="allOrder" wx:if="{{currentStatus == 4}}">
+	<text class="allOrder-left">已收货</text>
+</view>
+
+<view wx:for="{{list}}">
+  <view bindtap="toOrderDetail" class="orderDetails">
+	<view class="orderListTitle">
+		<text class="userName">{{item.code}}</text>
+    <!-- 代发货的订单 -->
+		<text class="orderStatus" wx:if="{{item.status == 0}}">待发货</text>
+
+     <!-- 已发货的 -->
+  	<text class="orderStatus"  bindtap="sh" data-object-id="{{item.id}}"  wx:if="{{item.status == 1}}">去收货</text>
+    <text class="orderStatus"  bindtap="sqtk"  data-object-id="{{item.id}}" wx:if="{{item.status == 1}}">申请退款</text>
+
+     <text class="orderStatus" wx:if="{{item.status == 2}}">退款中</text>
+
+     <text class="orderStatus" wx:if="{{item.status == 3}}">已退款</text>
+
+    <text class="orderStatus" bindtap="pj" data-object-id="{{item.spId}}"  wx:if="{{item.status == 4 && item.isPj == 0}}">去评价</text>
+    <text class="orderStatus"  wx:if="{{item.status == 4 && item.isPj == 1}}">已评价</text>
+	</view>
+	<view class="orderListDetails">
+		<view class="productImg">
+			<image src="{{item.ppUrl}}"></image>
+		</view>
+		<view class="productInfo">
+			<view class="productTitle">{{item.title}}</view>
+			<text class="productPrice">￥{{item.dj}}</text>
+			<text class="productQuantity">x{{item.num}}</text>
+		</view>
+	</view>
+	<view class="productCount">
+		<view>合计：￥<text>{{item.price}}</text></view>
+	</view>
+</view>	
+
+</view>
+
+
+
+
+
+

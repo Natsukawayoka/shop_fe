@@ -1,0 +1,29 @@
+<import src="../../templates/mm-radio/mm-radio.wxml" />
+<import src="../../templates/mm-tips/mm-tips.wxml" />
+<import src="../../templates/address-picker/address-picker.wxml" />
+
+<view>
+    <form name="addressForm" novalidate>
+        <view class="address-edit">
+	        <view class="addressView">
+	            <text>收 货 人</text>
+	            <input name="name" placeholder="请输入收货人姓名" placeholder-style="color: #A0A0A0" maxlength="15" value="{{name}}" bindinput="listenerReciverInput" />
+	        </view>
+	        <view class="addressView">
+	            <text>手机号码</text>
+	            <input type="text" maxlength="11" placeholder="请输入11位手机号码" bindtap="" value="{{phone}}" bindinput="listenerPhoneInput" />
+	          
+	        </view>
+	        <view class="addressView">
+	            <text>地址</text>
+	            <input type="text" maxlength="60" placeholder="请输入详细地址" value="{{address}}" bindinput="listenerAddressInput" />
+	        </view>
+	    </view>
+
+	   	<view class="btnBox">
+	    	<button class="btn-block" bindtap="submitBtn">
+	        	<text>提交地址</text>
+	    	</button>
+	    </view>
+    </form>
+</view>
